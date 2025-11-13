@@ -1,0 +1,181 @@
+/* Базовые стили (как и раньше) */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f6;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    padding: 24px 32px;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+}
+h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #6259C3;
+    margin: 0 0 12px 0;
+}
+h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+}
+hr {
+    border: none;
+    height: 1px;
+    background-color: #e0e6ed;
+    margin-bottom: 24px;
+}
+
+/* Стили для секции ввода данных */
+.data-input-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Выравниваем по верху */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.matrix-input-box {
+    width: 45%; /* Уменьшаем, чтобы влезла кнопка */
+}
+
+/* Стили для кнопки смены */
+.swap-button-container {
+    display: flex;
+    align-items: center;
+    padding-top: 60px; /* Опускаем кнопку на уровень сеток */
+}
+
+#swap-btn {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 50%; /* Круглая кнопка */
+    border: 1px solid #c7c3e3;
+    background-color: #f0f0ff;
+    color: #6259C3;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+#swap-btn:hover {
+    background-color: #e0e0ff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.dimension-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.dimension-controls label {
+    font-size: 14px;
+    color: #555;
+}
+.dimension-controls input[type="number"] {
+    width: 50px;
+    padding: 6px 8px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.generate-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #6259C3;
+    background-color: #f0f0ff;
+    border: 1px solid #c7c3e3;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.generate-btn:hover {
+    background-color: #e0e0ff;
+}
+.matrix-grid {
+    display: grid;
+    gap: 5px;
+}
+.matrix-grid input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+/* Стили секции управления (как и раньше) */
+.controls {
+    display: flex;
+    gap: 12px;
+}
+#operation-select {
+    flex-grow: 1;
+    padding: 12px 16px;
+    font-size: 16px;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23666" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    cursor: pointer;
+}
+#execute-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #6259C3;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+#execute-btn:hover {
+    background-color: #5048a1;
+}
+
+/* Контейнер для результатов */
+#result-container {
+    margin-top: 16px;
+    padding: 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    min-height: 50px;
+    color: #333;
+    font-size: 16px;
+}
+#result-output {
+    margin: 0;
+    font-family: "Courier New", Courier, monospace;
+    white-space: pre-wrap;
+}
+.error {
+    color: #D32F2F;
+    font-weight: bold;
+}

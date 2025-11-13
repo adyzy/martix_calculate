@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор Матриц</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
+</head>
+<body>
+
+    <main class="container">
+        <h1>Решение систем линейных уравнений и матриц</h1>
+        
+        <section class="data-input-section">
+            
+            <div class="matrix-input-box">
+                <h3>Матрица A</h3>
+                <div class="dimension-controls">
+                    <label>Строки: <input type="number" id="rows-a" value="3" min="1"></label>
+                    <label>Столбцы: <input type="number" id="cols-a" value="3" min="1"></label>
+                    <button id="generate-a-btn" class="generate-btn">Создать</button>
+                </div>
+                <div id="matrix-a-grid" class="matrix-grid"></div>
+            </div>
+            
+            <div class="swap-button-container">
+                <button id="swap-btn" title="Поменять матрицы A и B местами">↔</button>
+            </div>
+
+            <div class="matrix-input-box">
+                <h3>Матрица B (или вектор 'b')</h3>
+                <div class="dimension-controls">
+                    <label>Строки: <input type="number" id="rows-b" value="3" min="1"></label>
+                    <label>Столбцы: <input type="number" id="cols-b" value="1" min="1"></label>
+                    <button id="generate-b-btn" class="generate-btn">Создать</button>
+                </div>
+                <div id="matrix-b-grid" class="matrix-grid"></div>
+            </div>
+
+        </section>
+
+        <section class="menu-section">
+            <h2>1. Выберите операцию</h2>
+            <hr>
+            
+            <div class="controls">
+                <select id="operation-select">
+                    <option value="" disabled selected>Выберите действие...</option>
+                    <option value="determinant">Определитель (Матрица A)</option>
+                    <option value="transpose">Транспонировать (Матрица A)</option>
+                    <option value="inverse">Обратная матрица (Матрица A)</option>
+                    <option value="add">Сложение (A + B)</option>
+                    <option value="subtract">Вычитание (A - B)</option>
+                    <option value="multiply">Умножение (A * B)</option>
+                    <option value="solve-sle">Решить СЛАУ (A*x = b)</option>
+                </select>
+                
+                <button id="execute-btn">Выполнить</button>
+            </div>
+
+            <h3>Результат:</h3>
+            <div id="result-container">
+                <pre id="result-output">Результат операции появится здесь...</pre>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="Script/script.js"></script>
+</body>
+</html>
